@@ -269,7 +269,7 @@ class Calendar extends React.Component {
       for (let i = 0; i < 7; i++) {
         formattedDate = dateFns.format(day, dateFormat);
         const cloneDay = dateFns.parse(day);
-        const restrictedDate = minDateStart && dateFns.isBefore(day, minDateStart);
+        const restrictedDate = false;
         let style = [styles.day]
         let textStyle = [styles.dayText]
         if(!this.state.weekMode && !dateFns.isSameMonth(day, monthStart) || restrictedDate){
